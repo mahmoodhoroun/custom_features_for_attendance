@@ -1,0 +1,644 @@
+//Variables
+$background: #fbffff;
+$tableHeaderBg: #C9DBFF;
+$borderColor: #BDBEC0;
+$tableColor: #212529;
+$totalBc: #F5FF9B;
+
+//Variables report2
+$r2BodyBg:#fff;
+$r2mainColor: #E1E9FF;
+$r2InvoiceColor:#A2656B;
+$r2BorderColor: #23262D;
+$r2companyColor: #6D8E9E;
+
+//Variables report3
+$r3InvoiceColor: #1C1E13;
+$r3BorderColor:  #1C1E13;
+$r3TableBg: #9E9E9E;
+
+//Variables report4
+$r4Color: #000;
+$r4BigBorder:#FF9F05;
+$r4TableBorder: #000;
+$r4borderBottom: #000;
+
+//Variables report5
+$r5MainColor: #2F5596;
+$r5BlackColor:#000;
+$r5WhiteColor:#fff;
+$r5GrayColor: #D9D9D9;
+$r5FontColor:#000;
+$r5LightGray: #F2F2F2;
+
+//Variables report6
+$r6FontColor: #010101;
+$r6GrayColor: #8c8c8c;
+$r6RedColor: #c10100;
+$r6Lightborder: #E4E4E4;
+$r6ThBg: #eeeeee;
+
+//Variables report7
+$r7BlueColor: #3556C9;
+$r7WhiteColor: #fff;
+$r7LightBlue: #D4E1F2;
+$r7GryColor: #ececec;
+$r7BorderColor: #CCCCCC;
+$r7FontColor:#1C1B23;
+
+//Variables report8
+$r8mainColor: #C55911;
+$r8TableBorder:#000;
+
+@import "bootstrap.min.css";
+@import "fontawesome-all.css";
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap');
+body{
+  background-color: $background;
+}
+.table-bordered{
+  td,th{
+    border-color: $borderColor
+  }
+}
+table.table{
+  color: $tableColor;
+}
+.elect-table{
+  border: none;
+}
+.comp-d-table{
+  tbody{
+    tr{
+      td:first-child{
+        text-align: right;
+      }
+    }
+  }
+}
+.t-header-bg{
+  th{
+    background-color: $tableHeaderBg;
+  }
+}
+.fourth-section{
+  table{
+    tbody{
+      tr:last-child{
+        td{
+          font-weight: 700;
+          &:last-child{
+            background-color:$totalBc ;
+          }
+        }
+      }
+      td{
+        text-align: right;
+      }
+      td:first-child{
+        @media (min-width: 767.98px) {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+//report1 End
+//report2 start
+.fw-500{
+  font-weight: 500;
+}
+.fw-600{
+  font-weight: 600;
+}
+.fw-700{
+  font-weight: 700;
+}
+.fw-800{
+  font-weight: 800;
+}
+.fw-900{
+  font-weight: 900;
+}
+.r2{
+  background-color: $r2BodyBg;
+}
+.red-invoice{
+  color: $r2InvoiceColor;
+  font-weight: 800;
+  text-align: center;
+  @media (min-width: 991.98px) {
+    text-align: right;
+  }
+}
+.r2-bc{
+  background-color: $r2mainColor;
+}
+.r2-comp-details{
+  ul{
+    margin-bottom: 0;
+    li{
+      p{
+        margin-bottom: 10px;
+      }
+      h3{
+        color: $r2companyColor;
+      }
+      &:last-child{
+        p{
+          background-color: $r2mainColor;
+          border-bottom: 1px solid $r2BorderColor;
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}
+table.r2-table{
+  th,td{
+    border-color: $r2BorderColor ;
+  }
+}
+.r2-table-1{
+  td{
+    width: 33.333%;
+  }
+  p{
+    background-color: $r2mainColor;
+    border-bottom: 1px solid $r2BorderColor;
+    display: inline;
+
+  }
+}
+.r2-table-2{
+  td{
+    background-color: $r2mainColor;
+  }
+}
+.va-middle{
+  vertical-align: middle !important;
+}
+.r2-border-bottom{
+  border-bottom: 1px solid $r2BorderColor;
+}
+//report2 end
+//report3 Start
+.r3-invoice-word{
+  text-align: right;
+  h2{
+    color: $r3InvoiceColor;
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 9px;
+
+  }
+}
+.r3-border-bottom{
+  border-bottom: solid 1px $r3BorderColor;
+}
+.va-bottom{
+  vertical-align: bottom !important;
+}
+.r3-table-1{
+  th{
+    background-color: $r3TableBg ;
+    padding: 0.5rem;
+    color: $r3BorderColor;
+  }
+  td{
+    padding: 0.5rem;
+    color: $r3BorderColor;
+  }
+}
+.r3-color{
+  color: $r3BorderColor;
+}
+//End report3
+//Start report4
+.r4-color{
+  color: $r4Color;
+}
+.r4{
+  border: 15px solid $r4BigBorder;
+  font-family: 'PT Serif', serif;
+
+}
+.r4-logo{
+  img{
+    max-width: 250px;
+    height: auto;
+  }
+}
+.r4-invoice{
+  h3{
+    font-size: 35px;
+    display: inline-block;
+    border: 5px solid $r4Color;
+    padding: 5px 60px;
+    border-radius: 5px;
+  }
+}
+.r4-table{
+  th{
+    text-transform: uppercase;
+  }
+  th,td{
+    border-color: $r4TableBorder;
+  }
+}
+.r4-border-bottom{
+  border-bottom: 1px solid $r4borderBottom;
+}
+//report4 End
+//report5 starting
+
+.r5{
+  color: $r5FontColor;
+}
+.r5-first-section{
+  h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-top: 70px;
+  }
+}
+.r5-icon-list{
+  i{
+    color: $r5MainColor;
+    width: 25px;
+    text-align: center;
+  }
+}
+.r5-invoice-card{
+  background-color: $r5MainColor;
+  color: $r5WhiteColor;
+  padding: 135px 10px 25px 10px;
+  margin-right: 40px;
+  h2{
+    border-bottom: 2px solid $r5WhiteColor;
+    display: inline-block;
+  }
+}
+.r5-table{
+  text-align: center;
+  tbody{
+    tr{
+      th,td{
+        border: 0;
+      }
+      th:first-child,th:nth-child(2) {
+        text-align: left;
+      }
+      td:first-child,td:nth-child(2){
+        text-align: left;
+      }
+      background-color: $r5LightGray;
+      &:nth-child(even){
+        background-color: $r5GrayColor;
+      }
+    }
+    th{
+      color: $r5WhiteColor;
+      background-color: $r5MainColor;
+      &:last-child{
+        border-left: 2px solid $r5WhiteColor;
+      }
+    }
+    th:first-child , th:nth-child(2){
+      background-color: $r5BlackColor;
+    }
+    th:nth-child(2){
+      border-right: 2px solid $r5WhiteColor;
+    }
+  }
+}
+.r5-blue-color{
+  color: $r5MainColor;
+}
+.r5-blue-bg{
+  background-color:$r5MainColor ;
+}
+.r5-black-bg{
+  background-color: $r5BlackColor;
+}
+.r5-white-color{
+  color:$r5WhiteColor
+}
+.r5-total{
+  td{
+   font-size: 20px;
+    font-weight: 700;
+  }
+}
+.r5-border-bottom{
+  border-bottom: 1px solid $r5FontColor;
+}
+.r5-fourth-section{
+  background-color: $r5MainColor;
+  text-align: center;
+  color: $r5WhiteColor;
+  padding: 10px;
+}
+//report5 End
+//report6 Start
+.r6{
+  color: $r6FontColor;
+}
+.r6-first-section{
+  h2{
+    font-size: 90px;
+    font-weight: 700;
+  }
+}
+.r6-logo{
+  img{
+    max-width: 200px;
+    max-height:80px ;
+  }
+}
+.r6-invoice-number{
+  span{
+      color: $r6GrayColor;
+  }
+  p{
+    color: $r6RedColor;
+    font-weight: 700;
+    margin-top: -15px;
+    font-size: 21px;
+    span{
+        font-size: 16px;
+    }
+  }
+}
+table.r6-table1{
+  color: $r6FontColor;
+  th{
+    border-bottom: 3px solid $r6FontColor;
+    border-top: 0;
+    font-size: 25px;
+    font-weight: 800;
+  }
+  tr{
+    td{
+      padding: 2px 0.75rem;
+      font-size: 20px;
+      border-bottom: 2px solid $r6Lightborder;
+      &:first-child , &:nth-child(3){
+        color: $r6GrayColor;
+        font-size: 15px;
+        vertical-align: middle;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+    &:nth-child(2){
+      td{
+        position: relative;
+        &:after{
+          left: 0;
+          position: absolute;
+          content: '';
+          display: block;
+          top: 0;
+          height: 6px;
+          background-color: $r6Lightborder;
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}
+.r6-table2 {
+  tr{
+    &:first-child{
+      td{
+        border: 2px solid transparent;
+        font-size: 25px;
+        font-weight: 800;
+
+      }
+    }
+    &:last-child{
+      td{
+        background-color: $r6ThBg;
+        text-align: right !important;
+        border-bottom: 3px solid $r6FontColor;
+        h3{
+          color: $r6FontColor;
+          font-weight: 800;
+          span{
+            color: $r6RedColor;
+          }
+        }
+      }
+    }
+    th{
+      background-color: $r6ThBg;
+      border:2px solid $r6Lightborder;
+      border-top: 3px solid $r6FontColor;
+      &:first-child {
+        border-left-color:  transparent;
+      }
+      &:last-child{
+        border-right-color:  transparent;
+      }
+      &:nth-child(2){
+        text-align: left !important;
+      }
+    }
+    td{
+      &:first-child {
+        border-left-color:  transparent;
+        color: $r6GrayColor;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &:last-child{
+        border-right-color:  transparent;
+      }
+      border:2px solid $r6Lightborder;
+      &:nth-child(2){
+        text-align: left !important;
+      }
+    }
+  }
+}
+.r6-table3{
+  th{
+    font-size: 20px;
+    font-weight: 800;
+    border-color: transparent;
+    border-bottom: 3px solid $r6FontColor;
+  }
+  td{
+    border-color: transparent;
+      color: $r6GrayColor;
+      position: relative;
+      &:after{
+        left: 0;
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        height: 6px;
+        background-color: $r6Lightborder;
+        width: 100%;
+      }
+  }
+}
+//report6 end
+//report7 start
+.r7{
+  color: $r7FontColor;
+}
+.r7-invoice{
+  text-align: center;
+  padding-top: 100px;
+  background-color: $r7BlueColor;
+  padding-bottom: 30px;
+  h3{
+    color: $r7WhiteColor;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}
+.r7-side-div{
+  background-color: $r7LightBlue;
+  .r7-logo{
+    margin-top: 20px;
+    img{
+      max-width: 80%;
+    }
+  }
+}
+.r7-info-container{
+  padding: 10px;
+  margin-top: 30px;
+  p{
+    margin-bottom: 5px;
+  }
+}
+.r7-first-section{
+  margin-top: 150px;
+  span{
+    font-weight: 600;
+  }
+  p{
+    border-bottom: 1px solid $r7BorderColor;
+    margin-top: 20px;
+    margin-bottom: 0;
+    min-width: 150px;
+    font-weight: 600;
+  }
+}
+.r7-second-section{
+  p{
+    margin-top: 30px;
+    font-style: italic;
+  }
+}
+.r7-title{
+  border-bottom: 1px solid $r7BorderColor;
+  padding-bottom: 3px;
+  font-weight: 700;
+}
+.r7-third-section{
+  p{
+    margin-bottom: 3px;
+  }
+}
+.r7-table{
+  text-align: center;
+  tr{
+    
+    &:nth-child(odd){
+      td{
+        background-color: $r7GryColor;
+      }
+    }
+    &:nth-last-child(2){
+      td{
+        border-bottom-color: $r7FontColor ;
+      }
+    }
+    &:last-child{
+      td{
+        border-color: $r7FontColor ;
+      }
+    }
+    th{
+      border: 2px solid $r7BorderColor;
+      background-color: $r7BlueColor;
+      color: $r7WhiteColor;
+    }
+    td{
+      border: 2px solid $r7BorderColor;
+      &.r7-LightBlue-bg{
+        background-color: $r7LightBlue;
+      }
+      &:last-child{
+        text-align: right;
+      }
+    }
+  }
+
+}
+.r7-LightBlue-bg{
+  background-color: $r7LightBlue;
+}
+.r7-fifth-section{
+  p{
+    border-top: 1px solid $r7FontColor;
+  }
+}
+//report7 End
+//report8 Start
+.r8-invoice-table{
+  table{
+    th{
+        background-color: $r8mainColor;
+      color: white;
+      border-color: $r8TableBorder;
+    }
+    tr{
+      td{
+        padding-top:5px ;
+        padding-bottom: 5px;
+        border-color: $r8TableBorder;
+      }
+      &:not(:first-child){
+        td{
+          //border-top: 0;
+        }
+      }
+      &:not(:last-child){
+        td{
+          //border-bottom: 0;
+          //padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.r8-table-2{
+  tr{
+    th{
+      background-color: $r8mainColor;
+      color: #fff;
+      border-color: $r8TableBorder;
+    }
+    td{
+      border-color: $r8TableBorder;
+    }
+  }
+}
+.border-bottom-dashed{
+  border-bottom: 2px dashed $r8TableBorder;
+}
+.r8-bg{
+  background-color: $r8mainColor;
+}
+.r8-border{
+  border: 1px solid $r8TableBorder;
+}

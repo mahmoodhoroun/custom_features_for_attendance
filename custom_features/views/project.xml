@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ruwais_project_form" model="ir.ui.view">
+        <field name="name">view.ruwais.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='settings']" position="after">
+                <page name="geo_location" string="Geo Location">
+                    <group>
+                        <field name="radius" />
+                        <field name="longitude" />
+                        <field name="latitude" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

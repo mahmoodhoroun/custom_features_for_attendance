@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+timeporject_model_user,timeproject_model_user,model_project_time,base.group_user,1,0,0,0
+attendance_stat_model_user,attendance_stat_model_user,model_employee_attendance_stat,base.group_user,1,1,0,1
+attendance_state_daily_model,attendance_state_daily_model,model_attendance_daily_stat,base.group_user,1,1,1,1

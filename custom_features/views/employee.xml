@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ruwais_employee_form" model="ir.ui.view">
+        <field name="name">view.ruwais.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <!-- <button string="Send Notification" name="send_notifications" type="object" /> -->
+            </xpath>
+            <xpath expr="//field[@name='coach_id']" position="after">
+                <field name="contract_type" />
+                <!-- <field name="is_time_off_hr" /> -->
+            </xpath>
+            <xpath expr="//field[@name='work_email']" position="after">
+                <field name="structure_type_id" attrs="{'readonly' : True}" />
+                <field name="worktime_type" />
+            </xpath>
+           <xpath expr="//page[@name='hr_settings']" position="after">
+                <page name="leaves" string="Leave Balance">
+                    <group>
+                        <field name="annual_leave" attrs="{'readonly' : True }"/>
+                        <field name="casual_leave" attrs="{'readonly' : True }" />
+                        <field name="sick_leave" attrs="{'readonly' : True }"/>
+                        <field name="maternity_leave" attrs="{'readonly' : True }"/>
+                        <field name="unpaid_leave" attrs="{'readonly' : True }"/>
+                        <field name="eid_alfitr_leave" attrs="{'readonly' : True }"/>
+                        <field name="eid_aladha_leave" attrs="{'readonly' : True }"/>
+                        <field name="national_day_leave" attrs="{'readonly' : True }"/>
+                        <field name="sports_day_leave" attrs="{'readonly' : True }"/>
+                        <field name="gratuity_leave" attrs="{'readonly' : True }"/>
+                        <field name="compensatory_leave" attrs="{'readonly' : True }"/>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='hr_settings']" position="after">
+                <page name="air_ticket_info_group" string="Air Line Tickets">
+                    <group>
+                        <group name="ticket_group" string="Public info">
+                            <field name="marital_status" string="Marital Status" />
+                            <field name="balance_tickets" string="Balance Tickets" />
+                            <field name="due_date" readonly='1' />
+                        </group>
+                        <group name="received_group" string="Received Info">
+                            <field name="is_received" />
+                            <field name="received_type" attrs="{'invisible' : [('is_received', '=', False )]}"/>
+                            <field name="received_date" attrs="{'invisible' : [('is_received', '=', False )]}" />
+                            <field name="tickets_cost" attrs="{'invisible' : [('received_type', '=', 'tickets')]}"/>
+                        </group>
+                    </group>
+                </page>
+           </xpath>
+        </field>
+    </record>
+    <record id="view_ruwais_public_employee_form" model="ir.ui.view">
+        <field name="name">view.ruwais.employee.public.form</field>
+        <field name="model">hr.employee.public</field>
+        <field name="inherit_id" ref="hr.hr_employee_public_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='coach_id']" position="after">
+                <field name="contract_type" />
+                <field name="structure_type_id" />
+            </xpath>
+            <xpath expr="//page[@name='public']" position="after">
+                <page name="leaves" string="Leave Balance">
+                    <group>
+                        <field name="annual_leave" />
+                        <field name="casual_leave"  />
+                        <field name="sick_leave" />
+                        <field name="maternity_leave" />
+                        <field name="unpaid_leave" />
+                        <field name="eid_alfitr_leave" />
+                        <field name="eid_aladha_leave" />
+                        <field name="national_day_leave" />
+                        <field name="sports_day_leave" />
+                        <field name="gratuity_leave" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

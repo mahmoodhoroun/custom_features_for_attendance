@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="update_data_attendnace_stats_action" model="ir.actions.server">
+            <field name="name">Update Data to Attendance Stats</field>
+            <field name="model_id" ref="model_employee_attendance_stat"/>
+            <field name="state">code</field>
+            <field name="code">model.validate_data_attendance</field>
+        </record>
+    </data>
+    
+</odoo>

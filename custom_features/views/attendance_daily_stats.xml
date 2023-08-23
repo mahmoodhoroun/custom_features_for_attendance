@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="attendnace_stats_dily_view_menuitem" model="ir.actions.act_window">
+        <field name="name">Attendance Daily Stats</field>
+        <field name="res_model">attendance.daily.stat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record  model="ir.ui.view" id="attenance_stat_daily_action_tree">
+        <field name="name">Employee Daily State Daily</field>
+        <field name="model">attendance.daily.stat</field>
+        <field name="arch" type="xml">
+            <tree string="Employee Attendance Stat">
+                <field name="employee_id"/>
+                <field name="date"/>
+                <field name="required_hours"  widget="float_time" />
+                <field name="net_hours"  widget="float_time" />
+                <field name="under_overtime"  widget="float_time" />
+                <field name="overtime"  widget="float_time" />
+            </tree>
+        </field>
+    </record>
+        
+    <record model="ir.ui.view" id="view_attendance_daily_stats_search">
+        <field name="name">Employee Attendance Daily Search</field>
+        <field name="model">attendance.daily.stat</field>
+        <field name="arch" type="xml">
+            <search string="Tests">
+                <field name="employee_id"/>
+                <field name="date"/>
+                  <group expand="0" string="Group By">
+                        <filter name="employee_id" string="Employee" context="{'group_by': 'employee_id'}"/>
+                        <filter name="date" string="Date" context="{'group_by': 'date'}"/>
+                  </group>
+            </search>
+        </field>
+    </record>
+
+    <menuitem id="attendance_daily_stat" name="Attendance Daily Stats" action="attendnace_stats_dily_view_menuitem" parent="hr_attendance.menu_hr_attendance_root" />
+</odoo>

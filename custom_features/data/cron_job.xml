@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <data>
+        <record model="ir.cron" id="corn_job_to_close_attendance">
+            <field name="name">Close Attendance To Empolyee</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_hr_attendance"/>
+            <field name="code">model.closing_records_attendance_morning()</field>
+        </record>
+
+        <record model="ir.cron" id="record_create_cron_update_time_transfer">
+            <field name="name">Upadte Attendance Time Transfer</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_hr_attendance"/>
+            <field name="code">model.calucate_time_between_projects()</field>
+        </record>
+
+        <record model="ir.cron" id="cron_job_update_balance_leave">
+            <field name="name">Update Balance Of Leaves</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_hr_employee"/>
+            <field name="code">model.cron_balnace()</field>
+        </record>
+
+        <record model="ir.cron" id="cron_update_attendance_state">
+            <field name="name">Updating statistics of Employee Attendance on a Daily basis.</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_employee_attendance_stat"/>
+            <field name="code">model.update_employee_attendance_stats()</field>
+        </record>
+
+        <record model="ir.cron" id="cron_update_attendance_state_specifed_period">
+            <field name="name">Updating Statistics of Employee Attendance on a Specifed Period</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="active">False</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_employee_attendance_stat"/>
+            <field name="code">model.create_employee_attendance_pervious_month()</field>
+        </record>
+        <record model="ir.cron" id="cron_send_notifcation_employee">
+            <field name="name">Send Notification to Employee that did not work Required Working Hours</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_hr_attendance"/>
+            <field name="code">model.compare_daily_working_hours()</field>
+        </record>
+        
+    </data>
+</odoo>

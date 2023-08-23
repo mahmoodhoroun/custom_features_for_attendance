@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="work_entry_type_1" model="hr.work.entry.type">
+            <field name="name">Basic Salary</field>
+            <field name="code">BASA-01</field>
+        </record>
+        <record id="work_entry_type_2" model="hr.work.entry.type">
+            <field name="name">Allowance Salary</field>
+            <field name="code">ALWS-02</field>
+        </record>
+        <record id="work_entry_type_3" model="hr.work.entry.type">
+            <field name="name">Friday OverTime</field>
+            <field name="code">FOTS-03</field>
+        </record>
+        <record id="work_entry_type_4" model="hr.work.entry.type">
+            <field name="name">Noraml OverTime</field>
+            <field name="code">NOTS-04</field>
+        </record>
+        <record id="work_entry_type_5" model="hr.work.entry.type">
+            <field name="name">Loans</field>
+            <field name="code">LODE-05</field>
+        </record>
+        <record id="work_entry_type_6" model="hr.work.entry.type">
+            <field name="name">Leave Allowance</field>
+            <field name="code">LEVE-06</field>
+        </record>
+        <record id="work_entry_type_7" model="hr.work.entry.type">
+            <field name="name">Unpaid Leave</field>
+            <field name="code">UNLE-07</field>
+        </record>
+    </data>
+</odoo>

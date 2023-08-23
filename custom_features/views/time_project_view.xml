@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+     <record id="project_time_menuitem" model="ir.actions.act_window">
+        <field name="name">Time Project Transfar</field>
+        <field name="res_model">project.time</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+        <record  model="ir.ui.view" id="project_times_action">
+            <field name="name">Time Project</field>
+            <field name="model">project.time</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="from_project"/>
+                    <field name="to_project"/>
+                    <field name="time"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_project_times_form_rms">
+            <field name="name">view.project.times.form.rms</field>
+            <field name="model">project.time</field>
+            <field name="arch" type="xml">
+                <form string="Transfer times between projects">
+                   <sheet>
+                        <group>
+                            <field name="from_project" />
+                            <field name="to_project" />
+                        </group>
+                        <group>
+                            <field name="time" />
+                        </group>
+                   </sheet>
+                </form>
+            </field>
+        </record>
+
+    <menuitem action="project_time_menuitem" parent="project.menu_project_config" id="time_project_menuitem"/>
+
+</odoo>

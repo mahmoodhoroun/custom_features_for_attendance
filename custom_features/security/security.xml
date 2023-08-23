@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- <record model="ir.rule" id="product_category_comp_rule">
+            <field name="name">product category company rule</field>
+            <field name="model_id" ref="model_product_category"/>
+            <field name="domain_force"> ['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>
+        </record> -->
+
+         <record model="res.groups" id="group_access_project_time_transfer">
+            <field name="name">Access Project Time Transfer</field>
+        </record>
+        <record model="ir.model.access" id="model_project_time_permsion_group">
+            <field name="name">permission.group</field>
+            <field name="model_id" ref="model_project_time"/>
+            <field name="group_id" ref="group_access_project_time_transfer"/>
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+    </data>
+</odoo>
